@@ -45,7 +45,7 @@ done
 echo "Updating a commiting to Github..."
 
 git add .
-git commit -b
+git commit -m "Update"
 git push
 
 echo "updated to Github"
