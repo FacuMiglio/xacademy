@@ -53,13 +53,23 @@ echo "updated to Github"
 touch contar.sh
 contar.sh << EOF
 #!/bin/bash
-
-EOF
 for i in loremipsum-$i.txt
 do
-    contarsh= wc 
+    contarsh-$i = wc -l | cut -d ' ' -f 1
+    echo "loremipsum-$i.txt tiene $contarsh-$i lineas"
+done
+EOF
 
-echo "loremipsum-$1.txt tiene $i lineas "
+chmod +x contar.sh
+contar.sh
+
+echo "changing branch to generarlipsum"
+git chekout generarlipsum
+git add. 
+git commit -m "update"
+git push
+echo "github updated"
+
 
 
 
